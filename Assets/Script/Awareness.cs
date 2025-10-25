@@ -5,15 +5,22 @@ using UnityEngine;
 public class Awareness : MonoBehaviour
 {
     [SerializeField]
-    private Transform[] enemies;
+    private GameObject[] enemies;
     [SerializeField]
-    private float detectionRange;
+    private float detectRange = 3.0f;
 
-    public bool IsEnemyNear()
+    private void Update()
     {
-        for(int i = 0; i < enemies.Length; i++)
+        IsNearEnemy();
+    }
+    public bool IsNearEnemy()
+    {
+        for (int i = 0; i < enemies.Length; i++)
         {
-            return (Vector3.Distance(transform.position, enemies[i].position) < detectionRange);
+            if (Vector3.Distance(transform.position, enemies[i].transform.position) < detectRange)
+            {
+                return true;
+            }
         }
         return false;
     }
