@@ -17,6 +17,6 @@ public class HungerBar : MonoBehaviour
     private void UpdateBar(float current, float max)
     {
         fillImage.fillAmount = current / max;
-        fillText.text = $"{current}/{max}";
+        fillText.text = $"{current.ToString("N0")}/{max}";
     }
 }

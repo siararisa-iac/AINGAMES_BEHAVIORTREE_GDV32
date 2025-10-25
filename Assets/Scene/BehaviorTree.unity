@@ -551,10 +551,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemies:
-  - {fileID: 1080422525}
-  - {fileID: 1992265647}
-  - {fileID: 1762763463}
-  detectionRange: 3
+  - {fileID: 1080422521}
+  - {fileID: 1992265643}
+  - {fileID: 1762763459}
+  detectRange: 3
 --- !u!114 &1063137288
 MonoBehaviour:
   m_ObjectHideFlags: 0

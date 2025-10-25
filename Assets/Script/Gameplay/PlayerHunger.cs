@@ -16,6 +16,7 @@ public class PlayerHunger : MonoBehaviour
     public delegate void HungerDelegate(float current, float max);
     public static HungerDelegate OnHungerUpdated;
 
+    public bool IsHungry => Hunger <= MaxHunger / 2.0f;
     public float Hunger
     {
         get { return hunger; }

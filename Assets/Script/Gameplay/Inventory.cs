@@ -11,4 +11,9 @@ public class Inventory : MonoBehaviour
     {
         return inventory.Contains(itemName);
     }
+
+    public NodeState CheckInventory(string itemName)
+    {
+        return ContainsItem(itemName) ? NodeState.SUCCESS : NodeState.FAILURE;
+    }
 }
